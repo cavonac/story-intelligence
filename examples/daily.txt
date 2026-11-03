@@ -1,3 +1,5 @@
+Prompt to place into a configured schedule job within Hermes: 
+---
 Process exactly one unprocessed document from the ingestion queue ingestion-queue.tsv according to the processing protocol in the wiki SCHEMA.md
 
 If document is large, chunk it and process only what fits safely in context. Save progress for future runs.
