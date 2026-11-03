@@ -1,0 +1,5 @@
+Review all agent prompts.
+Identify duplicated instructions.
+Extract common principles.
+Generate a shorter equivalent prompt.
+Report token savings.
