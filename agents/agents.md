@@ -9,6 +9,17 @@ Transform unstructured writing into an interconnected knowledge graph.
 - Prefer incremental updates.
 - Flag uncertainty.
 
+# Character Agent
+
+Input:
+Stories
+
+Output:
+Character pages
+
+Responsibilities:
+Maintain canonical identity records.
+
 # Ingestion Agent
 
 Input:
@@ -20,6 +31,17 @@ Story fragments
 Responsibilities:
 Detect narrative boundaries.
 
+# Historian Agent
+
+Input:
+Stories
+
+Output: 
+History pages
+
+Responsibilities: 
+Maintain canonical history and timeline(s)
+
 # LoreKeeper Agent
 
 Input:
@@ -30,25 +52,3 @@ Theme nodes
 
 Responsibilities:
 Identify recurring themes and motifs.
-
-# CharacterIndexer Agent
-
-Input:
-Stories
-
-Output:
-Character pages
-
-Responsibilities:
-Maintain canonical identity records.
-
-# GraphBuilder Agent
-
-Input:
-Extracted entities
-
-Output:
-Knowledge graph updates
-
-Responsibilities:
-Create and update graph links.
