@@ -4,7 +4,11 @@
 
 This project exists to transform unstructured creative thought into discoverable story knowledge. 
 
-I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data relatively safely. 
+Story Intelligence transforms unstructured story archives into a living knowledge graph using LLM-Wiki, then deploys specialized analytical agents that continuously surface continuity issues, thematic patterns, character insights, and creative opportunities for the author.
+
+### My Story 
+
+I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data with relatively safety.
 
 ---
 ## Features
