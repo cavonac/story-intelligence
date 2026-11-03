@@ -6,6 +6,19 @@ This project exists to transform unstructured creative thought into discoverable
 
 I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data relatively safely. 
 
+---
+## Features
+
+- Ingests disparate documents in an asychronous pipeline that can be ran on a schedule
+- Outputs [Karparthy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)-style knowledge graph of your work
+- Functions as a literary archaeology tool by excavating stories
+- Local-first processing
+- Easy to read agent prompts for both AI and humans
+- Story synthesis in your voice is more likely, given the input
+
+---
+## Detail
+
 The primary input is not a finished manuscript.
 
 The primary input is a large collection of fragmented creative material accumulated over time:
@@ -24,10 +37,6 @@ The primary input is a large collection of fragmented creative material accumula
 These fragments may have been written months or years apart and often reference one another without explicit links. They are sometimes separated by a number dashes on a line, or by multiple blank lines (2-4). In this way, each snippet is written with the latest at the top and oldest at the bottom. I may have started and not finished other whole documents as well with overlapping concepts and themes. 
 
 The goal of the system is to ingest this material, identify relationships, and construct an evolving knowledge graph that reveals patterns, connections, themes, and potential narratives that may not be obvious to the author. 
-
-The system functions as a literary archaeology tool.
-
-It excavates stories.
 
 ---
 
