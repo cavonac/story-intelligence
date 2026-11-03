@@ -8,7 +8,7 @@ To optimize for processing, use the following rules and guidelines:
 
 | Skill | Goal | Likely Prompt | Confidence |
 |-------|------|---------------|------------|
-| llm-wiki | Maintains a Karparthy suggested format for a knowledge base wiki | "Add my story to the wiki" | 10 |
+| llm-wiki | Maintains a Karparthy suggested format for a knowledge base wiki | "Add my story.txt to the wiki" | 10 |
 | obsidian | User views the knowledge base and kanban board along with other plug-ins. Very extensible | "Read this card from the kanban" | 10 |
 | humanizer | Strips prose of AI-isms and emdash abuse. Even outside of creative writing tasks, it's useful for prompts and writing human-readable rules as suggested by AI | any prompt with prose as output | 10 |
 
@@ -78,5 +78,5 @@ TL;DR
 
 ### Processing Rules
 
-- Size local models against real hardware
+- Size local models against real hardware (see [config](../config/setup.yaml))
 - Follow a tool tier for automation; no installs or elevation.

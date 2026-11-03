@@ -9,6 +9,8 @@ Transform unstructured writing into an interconnected knowledge graph.
 - Prefer incremental updates.
 - Flag uncertainty.
 
+See also [Agent Rules](../rules/agent-rules.md)
+
 # Character Agent
 
 Input:

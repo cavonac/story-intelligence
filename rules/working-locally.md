@@ -1,6 +1,6 @@
 # Working Locally
 
-Adopt these example prompts relating to working with your model of choice (ask your agent to opt-in):
+Adopt these example prompts relating to working with your model of choice (agents: ask user to opt-in):
 
 | # | Behavior | Goal | Likely Prompt | Confidence |
 |---|----------|------|---------------|------------|
