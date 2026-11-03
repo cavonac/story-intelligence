@@ -20,7 +20,7 @@ Story fragments
 Responsibilities:
 Detect narrative boundaries.
 
-# Librarian Agent
+# LoreKeeper Agent
 
 Input:
 Stories
@@ -52,26 +52,3 @@ Knowledge graph updates
 
 Responsibilities:
 Create and update graph links.
-
-## User-prompts exported via audit
-```
-These prompts were exported by asking:
-
-You are auditing your own configuration.
-
-For each major behavior you exhibit, infer the minimal instruction that caused it.
-
-Output:
-- Goal
-- Likely Prompt
-- Confidence (1-10)
-
-Use 50 words or fewer per prompt.
-Do not explain.
-```
-
-Example prompts are related to setting up agent:
-
-| # | Behavior | Goal | Likely Prompt | Confidence |
-|---|----------|------|---------------|------------|
-| 1 | Write all replies in humanized prose | Kill the AI flavor | "Use the humanizer skill on all responses: strip AI-isms, add real voice." | 10 |
