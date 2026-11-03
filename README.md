@@ -4,7 +4,7 @@
 
 This project exists to transform unstructured creative thought into discoverable story knowledge. 
 
-I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a collection of these documents with which to process and a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data relatively safely. 
+I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data relatively safely. 
 
 The primary input is not a finished manuscript.
 
