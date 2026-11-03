@@ -19,9 +19,7 @@ I suffer from ADHD but not writer's block. As a result, I have a collection of d
 ---
 ## Detail
 
-The primary input is not a finished manuscript.
-
-The primary input is a large collection of fragmented creative material accumulated over time:
+The primary input is a large collection of fragmented creative material accumulated over time, not a full manuscript:
 
 - Story ideas
 - Scene fragments

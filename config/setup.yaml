@@ -1,0 +1,150 @@
+system:
+  name: creative-writing-wiki
+  version: 1.0
+
+hardware:
+  ram_gb: 64
+  vram_gb: 16
+
+llm:
+  provider: local
+  default_model: qwen2.5-14b
+  fallback_model: mistral-small
+  context_strategy: chunked
+  max_parallel_models: 1
+
+storage:
+  wiki_root: ./obsidian-vault
+  database: ./data/knowledge.db
+  graph_cache: ./data/graph
+  processed_documents: ./data/processed
+
+ingestion:
+  chunk_size: 3000
+  overlap: 250
+  supported_types:
+    - pdf
+    - markdown
+    - txt
+    - docx
+
+knowledge_graph:
+  enabled: true
+
+  entity_types:
+    - character
+    - location
+    - organization
+    - object
+    - theme
+    - event
+    - timeline_entry
+
+  relationship_types:
+    - knows
+    - opposes
+    - owns
+    - travels_to
+    - appears_in
+    - influences
+    - symbolizes
+
+agents:
+
+  librarian:
+    enabled: true
+    model: qwen2.5-14b
+
+    responsibilities:
+      - catalog_documents
+      - maintain_index
+      - answer_queries
+      - identify_duplicates
+
+  theme_extractor:
+    enabled: true
+    model: qwen2.5-14b
+
+    outputs:
+      - themes
+      - motifs
+      - recurring_symbols
+
+  character_analyst:
+    enabled: true
+    model: qwen2.5-14b
+
+    outputs:
+      - character_profiles
+      - relationships
+      - motivations
+
+  worldbuilding_curator:
+    enabled: true
+
+    outputs:
+      - locations
+      - factions
+      - lore
+      - historical_events
+
+  timeline_builder:
+    enabled: true
+
+    outputs:
+      - chronology
+      - event_sequences
+      - continuity_flags
+
+  graph_manager:
+    enabled: true
+
+    outputs:
+      - nodes
+      - edges
+      - backlink_updates
+
+obsidian:
+
+  create_pages: true
+
+  folders:
+    characters: Characters
+    locations: Locations
+    themes: Themes
+    timelines: Timelines
+    lore: Lore
+    source_documents: Sources
+
+  frontmatter:
+    generate: true
+
+automation:
+
+  post_ingest:
+    - theme_extractor
+    - character_analyst
+    - worldbuilding_curator
+    - timeline_builder
+    - graph_manager
+    - librarian
+
+safety:
+
+  preferred_execution_order:
+
+    - filesystem
+    - sqlite
+    - markdown_update
+    - json_generation
+    - python
+
+  retry_on_failure: true
+
+logging:
+
+  level: info
+
+  save_agent_outputs: true
+
+  save_reasoning_summary: true
