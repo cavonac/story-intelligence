@@ -233,5 +233,6 @@ Build a continuously evolving creative intelligence system capable of:
 - Preserving competing ideas
 - Supporting worldbuilding
 - Assisting manuscript development
+- Continues the writing process within the system
 
 The final product should function less like a writing assistant and more like a permanent literary research department for a single author.
