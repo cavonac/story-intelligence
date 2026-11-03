@@ -272,4 +272,4 @@ Mark work complete and stop. Never process a second document.
 
 ## Implementation details
 
-The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename
+The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename. This file remains outside of the wiki and is not part of the knowledge graph.

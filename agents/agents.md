@@ -2,55 +2,53 @@
 
 Transform unstructured writing into an interconnected knowledge graph.
 
-# Rules
+## Shared rules
 
 - Never modify source documents.
-- Preserve provenance.
-- Prefer incremental updates.
-- Flag uncertainty.
+- Preserve provenance for every fact added to the knowledge graph.
+- Prefer incremental updates over rebuilding existing pages.
+- Flag uncertainty rather than presenting an inference as fact.
+- Follow the shared [Agent Rules](../rules/agent-rules.md).
+- Follow each agent’s own instructions for its specific responsibilities.
 
-See also [Agent Rules](../rules/agent-rules.md)
+## Agent catalog
 
-# Character Agent
+### Character Agent
 
-Input:
-Stories
+Instructions: [Character Agent](./character.md)
 
-Output:
-Character pages
+- **Input:** Stories
+- **Output:** Character pages
+- **Owns:** Canonical character identity records
 
-Responsibilities:
-Maintain canonical identity records.
+### Ingestion Agent
 
-# Ingestion Agent
+Instructions: [Ingestion Agent](./ingestion.md)
 
-Input:
-Raw documents
+- **Input:** Raw documents
+- **Output:** Story fragments
+- **Owns:** Detecting and recording narrative boundaries
 
-Output:
-Story fragments
+### Historian Agent
 
-Responsibilities:
-Detect narrative boundaries.
+Instructions: [Historian Agent](./historian.md)
 
-# Historian Agent
+- **Input:** Stories
+- **Output:** History pages and timelines
+- **Owns:** Canonical history and timeline records
 
-Input:
-Stories
+### Lorekeeper Agent
 
-Output: 
-History pages
+Instructions: [Lorekeeper Agent](./lorekeeper.md)
 
-Responsibilities: 
-Maintain canonical history and timeline(s)
+- **Input:** Stories
+- **Output:** Lore nodes
+- **Owns:** Canonical records of the world’s lore
 
-# LoreKeeper Agent
+### Theme Analyst Agent
 
-Input:
-Stories
+Instructions: [Theme Analyst Agent](./theme-analyst.md)
 
-Output:
-Theme nodes
-
-Responsibilities:
-Identify recurring themes and motifs.
+- **Input:** Wiki pages
+- **Output:** Theme pages
+- **Owns:** Identifying and documenting recurring ideas
