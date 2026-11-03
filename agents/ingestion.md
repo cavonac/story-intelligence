@@ -234,6 +234,35 @@ Preserve ambiguity when uncertainty exists.
 
 Treat this knowledge base as a long-term archive intended for future research, learning, and creative writing.
 
+There should be a cron job created for the ingestion agent. Here is example text:
+
+```
+Process exactly one unprocessed document from the ingestion queue ingestion-queue.tsv according to the processing protocol in the wiki SCHEMA.md
+
+If document is large, chunk it and process only what fits safely in context. Save progress for future runs.
+
+Extract:
+Title, Author, Date, Source, Type.
+
+For each chunk:
+Summary, Keywords, Entities, Concepts, Claims, Relationships, Quotes.
+
+Create:
+Executive Summary
+Major Themes
+Key Insights
+Tags
+Wiki Links
+Open Questions
+Creative Relevance
+
+Update knowledge graph with new entities, concepts, and relationships according to established guidelines
+
+Do not invent facts.
+
+Mark work complete and stop. Never process a second document.
+```
+
 ## User Prompts Exported via Audit
 
 | # | Behavior | Goal | Likely Prompt | Confidence |
