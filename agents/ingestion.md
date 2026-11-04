@@ -263,6 +263,10 @@ Do not invent facts.
 Mark work complete and stop. Never process a second document.
 ```
 
+Your cron prompt may differ by system.
+
+Do not propagate errors by using sibling files for hints at schema; trust only ```SCHEMA.md```
+
 ## User Prompts Exported via Audit
 
 | # | Behavior | Goal | Likely Prompt | Confidence |
@@ -272,4 +276,6 @@ Mark work complete and stop. Never process a second document.
 
 ## Implementation details
 
-The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename. This file remains outside of the wiki and is not part of the knowledge graph.
+The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename. This file remains outside of the wiki and is not part of the knowledge graph and does not contain frontmatter. The agent was responsible for inserting filenames via prompt.
+
+Your pipeline may differ. 

@@ -1,5 +1,5 @@
 system:
-  name: creative-writing-wiki
+  name: story-intelligence-system
   version: 1.0
 
 hardware:
@@ -120,14 +120,14 @@ obsidian:
     generate: true
 
 automation:
-
-  post_ingest:
-    - theme_extractor
-    - character_analyst
-    - worldbuilding_curator
-    - timeline_builder
-    - graph_manager
-    - librarian
+  # No post ingest tasks, agents will be triggered or scheduled
+  # post_ingest:
+  #   - theme_extractor
+  #   - character_analyst
+  #   - worldbuilding_curator
+  #   - timeline_builder
+  #   - graph_manager
+  #   - librarian
 
 safety:
 
