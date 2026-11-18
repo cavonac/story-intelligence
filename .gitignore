@@ -1,0 +1,47 @@
+# Excludes all Obsidian-related configuration. All notes are tracked by Git.
+
+# All Obsidian configuration and runtime state is stored here
+.obsidian/**/*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+
+# Generated artifacts
+build/
+dist/
+output/
+exports/
+generated/
+
+# AI experiment outputs
+runs/
+logs/
+results/
+evaluations/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
