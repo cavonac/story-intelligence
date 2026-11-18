@@ -3,6 +3,10 @@
 # All Obsidian configuration and runtime state is stored here
 .obsidian/**/*
 
+data/
+obsidian-vault/
+*.db
+
 # OS
 .DS_Store
 Thumbs.db
