@@ -52,3 +52,11 @@ Instructions: [Theme Analyst Agent](./theme-analyst.md)
 - **Input:** Wiki pages
 - **Output:** Theme pages
 - **Owns:** Identifying and documenting recurring ideas
+
+### Symbolism Agent
+
+Instructions: [Symbolism Agent](./symbolism.md)
+
+- **Input:** Wiki Pages
+- **Output:** Symbolism Pages
+- **Owns:** Track recurring symbols.
