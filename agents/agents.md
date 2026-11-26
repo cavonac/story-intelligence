@@ -4,10 +4,10 @@ Transform unstructured writing into an interconnected knowledge graph.
 
 ## Tasks
 
-Special tasks for certain situations may occur. These have been documented under [tasks](/tasks/)
+Special tasks for certain situations may occur. 
 
-- [Setup](/tasks/setup.md) - one time setup tasks
-- [Migration](/tasks/migration.md) - migration guidelines when extracting from an existing Karpathy-style knowledge base
+- [`setup.md`](../tasks/setup.md) - one time setup tasks
+- [`migration.md`](../tasks/migration.md) - migration tasks when extracting from an existing Karpathy-style knowledge base
 
 
 ## Shared rules
