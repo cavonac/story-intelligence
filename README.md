@@ -19,8 +19,6 @@ Examples include:
 - Track dependencies and document setup, operational assumptions, and significant design decisions.
 - Use structured logging and basic monitoring so scheduled runs are easy to inspect and troubleshoot.
 
-A lot of that heavy lifting is done by the agent by user instruction, so results may vary, even on multiple runs using the same data. It is up the user to modify their implementation locally as needed, making this system portable for anyone  running agentic software now or in the future.
-
 ## What it does
 
 The pipeline can ingest creative material asynchronously and run on a schedule. It’s designed to:
@@ -58,6 +56,8 @@ Story discovery
 ```
 
 For example, notes about an abandoned lighthouse, messages from the sea, a flooded kingdom, and the tides might be connected as a potential story cluster, even if they were written months apart.
+
+A lot of the heavy lifting is done by the agent, so results may vary, even on multiple runs using the same data. It is up the user to modify their implementation locally as needed, making this system portable for anyone running agentic software now or in the future.
 
 ## Canon and possibilities
 
