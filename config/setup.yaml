@@ -1,7 +1,5 @@
 # Story Intelligence runtime config.
-# Single consumer: agents/setup.md (bootstrap + smoke test).
-# Runtime judgments -- chunk sizing, retries, parallelism, logging,
-# model-to-hardware fit -- belong to the agent and harness, not this file.
+# Single consumer: tasks/setup.md
 
 llm:
   # Exact model name your harness loads.
@@ -9,9 +7,10 @@ llm:
   # No fallback key on purpose: a missing model is a human decision.
   default_model: Qwen3.8-27B-UD-Q4_K_M
 
+# Set STORY_INTELLIGENCE_ROOT environment variable prior to running setup
 storage:
-  # Absolute paths, so a cron job's working directory can't relocate the runtime.
-  wiki_root: C:/SRC/story-intelligence/obsidian-vault
-  database: C:/SRC/story-intelligence/data/knowledge.db
-  graph_cache: C:/SRC/story-intelligence/data/graph
-  processed_documents: C:/SRC/story-intelligence/data/processed
+  project_root: "${STORY_INTELLIGENCE_ROOT}"
+  wiki_root: "${STORY_INTELLIGENCE_ROOT}/obsidian-vault"
+  database: "${STORY_INTELLIGENCE_ROOT}/data/knowledge.db"
+  graph_cache: "${STORY_INTELLIGENCE_ROOT}/data/graph"
+  processed_documents: "${STORY_INTELLIGENCE_ROOT}/data/processed"
