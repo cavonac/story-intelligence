@@ -4,11 +4,11 @@ Story Intelligence turns a collection of personal writing fragments into an evol
 
 ## Why
 
-I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data with relative safety.
+I suffer from ADHD, but not writer's block because it provides a lot of focus and creativity. Unfortunately, I have an unorganized collection of documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to perform asynchronous work on my local data with relative safety.
 
 The goal is to make it easier to explore my own work in a knowledge base and discover patterns I might otherwise miss.
 
-I also have a background in software engineering, so this project should follow modern engineering best practices wherever they make the system more reliable, secure, and maintainable. Keep the design practical: avoid unnecessary complexity, but don’t sacrifice sound architecture for a quick prototype.
+I also have a background in software engineering, so this project should follow modern engineering best practices wherever they make the system more reliable, secure, and maintainable. I plan to keep the design practical: avoid unnecessary complexity, but not sacrifice sound architecture for a quick prototype.
 
 Examples include:
 
@@ -32,6 +32,12 @@ The pipeline can ingest creative material asynchronously and run on a schedule. 
 - Export an evolving knowledge base to an Obsidian vault
 
 Inputs may include story ideas, scene fragments, dialogue, world-building, research notes, draft chapters, and unfinished narrative threads. In some documents, fragments are separated by dashes or blank lines, with newer notes near the top and older ones below.
+
+## Pre-requisites
+
+- I use [Obsidian](https://obsidian.md/) to view the KB and the knowledge graph
+- To schedule jobs for ingestion and massaging the data I use a [Hermes Agent](https://hermes-agent.nousresearch.com/) with a local model
+- In addition to the KB, I've added a kanban board for obvious reasons. The version I use is the [community plug-in](https://community.obsidian.md/plugins/obsidian-kanban) simply called 'Kanban'.
 
 ## How it works
 
