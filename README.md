@@ -36,6 +36,7 @@ Inputs may include story ideas, scene fragments, dialogue, world-building, resea
 - I use [Obsidian](https://obsidian.md/) to view the KB and the knowledge graph
 - To schedule jobs for ingestion and massaging the data I use a [Hermes Agent](https://hermes-agent.nousresearch.com/) with a local model
 - In addition to the KB, I've added a kanban board for obvious reasons. The version I use is the [community plug-in](https://community.obsidian.md/plugins/obsidian-kanban) simply called 'Kanban'.
+- Coding tools like [Python](https://www.python.org/) and [Git](https://git-scm.com/) are recommended for linting and version control
 
 ## How it works
 
