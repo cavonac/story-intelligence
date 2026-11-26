@@ -45,30 +45,15 @@ SCHEMA.md is an output, not an input. Do not require it here.
 
 1. Check user has set environment variable ```STORY_INTELLIGENCE_ROOT``` to their desired path to install and the folder is empty.
 2. Read config/setup.yaml. Confirm it parses.
-3. Check each configured path and report exists or missing (expand the environment variable in the yaml to create combined folder paths):
+3. Check each configured path and report exists or missing (expand the environment variable in the YAML to create combined folder paths):
    - storage.wiki_root
-   - storage.database
-   - storage.graph_cache
-   - storage.processed_documents
-3. Load llm.default_model. If it does not load, stop and report. Do not silently fall back to llm.fallback_model.
+4. Load llm.default_model. If it does not load, stop and report. Do not silently fall back to llm.fallback_model.
 
 Stop and ask if a required path is missing and cannot be created safely, or if the model will not load.
 
-## Step 2: Scaffold
-
-Create only what is missing. Never overwrite existing files or directories.
-
-- wiki_root/
-- the parent directory of storage.database
-- graph_cache/
-- processed_documents/
-- a log file for setup output (not the wiki's log.md, which llm-wiki creates).
-
-Do not create SCHEMA.md, index.md, or the wiki's log.md here. llm-wiki owns those.
-
 ## Step 3: Build the wiki
 
-Run the llm-wiki skill to create a new wiki.
+Use the llm-wiki skill to create a new Karpathy style wiki knowledge base.
 
 - Pass the domain: "story intelligence - narrative analysis of long-form fiction: characters, themes, symbolism, plot structure, world-building, and their interrelations." llm-wiki uses the domain to write SCHEMA.md.
 - Point it at storage.wiki_root.
@@ -87,14 +72,13 @@ If the wiki already exists at wiki_root (SCHEMA.md and index.md present), do not
 Create the ingestion queue exactly as SCHEMA.md's ingestion-queue section specifies: location, filename, columns, status values, and ordering.
 
 - If SCHEMA.md already created the queue, verify it is empty of data rows (header only) and continue.
-- If it did not, create it with the header only. Leave it empty of data rows. The smoke test adds its own row.
+- If it did not, create it with the header only. Leave it empty of data rows. 
 
 ## Step 6: Report
 
 Produce a short report. No preamble.
 
 - What exists now: the paths and files you created or verified, including the generated SCHEMA.md.
-- Needs a human: any path, model, or credential the repo left unset, plus confirmation of the golden baseline.
 - Ready: one line stating whether the runtime can now ingest real documents.
 
 Stop after the report. Do not begin ingesting real documents.

@@ -9,8 +9,4 @@ llm:
 
 # Set STORY_INTELLIGENCE_ROOT environment variable prior to running setup
 storage:
-  project_root: "${STORY_INTELLIGENCE_ROOT}"
-  wiki_root: "${STORY_INTELLIGENCE_ROOT}/obsidian-vault"
-  database: "${STORY_INTELLIGENCE_ROOT}/data/knowledge.db"
-  graph_cache: "${STORY_INTELLIGENCE_ROOT}/data/graph"
-  processed_documents: "${STORY_INTELLIGENCE_ROOT}/data/processed"
+  wiki_root: "${STORY_INTELLIGENCE_ROOT}"

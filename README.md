@@ -81,10 +81,10 @@ AI can help analyze the notes and suggest connections or draft material. Suggest
 
 ## Setup
 
-1. Review [`tasks/setup.md`](./tasks/setup.md) for installation guidance.
-2. Update [`config/setup.yaml`](./config/setup.yaml) for your system and preferences before setup.
-3. Start with [`agents/agents.md`](./agents/agents.md) for the agent workflow.
-
+1. Set the environment variable ```STORY_INTELLIGENCE_ROOT``` to your desired path to install.
+2. Review [`tasks/setup.md`](./tasks/setup.md) to understand its implications.
+3. Update [`config/setup.yaml`](./config/setup.yaml) for your system and preferences before setup.
+4. (Optional) Review [`agents/agents.md`](./agents/agents.md)
 
 ## Long-term goal
 
