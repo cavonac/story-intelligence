@@ -1,12 +1,25 @@
 # Story Intelligence
 
-Story Intelligence turns a collection of personal writing fragments into an evolving knowledge base. It uses [LLM-Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) as a "pattern for building personal knowledge bases using LLMs" (Karpathy, 2026) and to organize ideas into a knowledge graph, then helps surface connections, continuity issues, themes, and possible story directions.
+Story Intelligence turns a collection of personal writing fragments into an evolving knowledge base. It uses [LLM-Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) as a "pattern for building personal knowledge bases using LLMs" (Karpathy, 2026) by organizing my story ideas which then helps surface connections, continuity issues, themes, and possible story directions.
 
 ## Why
 
 I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data with relative safety.
 
 The goal is to make it easier to explore my own work in a knowledge base and discover patterns I might otherwise miss.
+
+I also have a background in software engineering, so this project should follow modern engineering best practices wherever they make the system more reliable, secure, and maintainable. Keep the design practical: avoid unnecessary complexity, but don’t sacrifice sound architecture for a quick prototype.
+
+Examples include:
+
+- Use clear module boundaries and well-defined interfaces between stages.
+- Validate configuration and input data, and handle failures and retries explicitly.
+- Add automated tests for core behavior, especially ingestion, parsing, and graph updates.
+- Protect local data with sensible permissions, safe file handling, and documented backup and recovery procedures.
+- Track dependencies and document setup, operational assumptions, and significant design decisions.
+- Use structured logging and basic monitoring so scheduled runs are easy to inspect and troubleshoot.
+
+A lot of that heavy lifting is done by the agent by user instruction, so results may vary, even on multiple runs using the same data. It is up the user to modify their implementation locally as needed, making this system portable for anyone  running agentic software now or in the future.
 
 ## What it does
 
@@ -38,7 +51,7 @@ Obsidian vault
 Story discovery
 ```
 
-For example, notes about an abandoned lighthouse, messages from the sea, a flooded kingdom, and the tides might be connected as a potential story cluster—even if they were written months apart.
+For example, notes about an abandoned lighthouse, messages from the sea, a flooded kingdom, and the tides might be connected as a potential story cluster, even if they were written months apart.
 
 ## Canon and possibilities
 
