@@ -1,238 +1,71 @@
-# Creative Writing "Story Intelligence" System
+# Story Intelligence
 
-## Vision
+Story Intelligence turns a collection of personal writing fragments into an evolving knowledge base. It uses LLM-Wiki to organize ideas into a knowledge graph, then helps surface connections, continuity issues, themes, and possible story directions.
 
-This project exists to transform unstructured creative thought into discoverable story knowledge. 
+## Why
 
-Story Intelligence transforms unstructured story archives into a living knowledge graph using LLM-Wiki, then deploys specialized analytical agents that continuously surface continuity issues, thematic patterns, character insights, and creative opportunities for the author.
+I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data with relative safety.
 
-### My Story 
+The goal is to make it easier to explore my own work in a knowledge base and discover patterns I might otherwise miss.
 
-I suffer from ADHD but not writer's block. As a result, I have a collection of disparate documents with different themes, settings, and characters that I want to synthesize into a coherent knowledge base wiki. Furthermore, I have a limited model agent at my disposal. I need a way to make an asynchronous pipeline for this work on my local data with relatively safety.
+## What it does
 
----
-## Features
+The pipeline can ingest creative material asynchronously and run on a schedule. It’s designed to:
 
-- Ingests disparate documents in an asychronous pipeline that can be ran on a schedule
-- Outputs [Karparthy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)-style knowledge graph of your work
-- Functions as a literary archaeology tool by excavating stories
-- Local-first processing
-- Easy to read agent prompts for both AI and humans
-- Story synthesis in your voice is more likely, given the input
+- Extract characters, settings, concepts, and relationships
+- Group related fragments into possible narrative clusters
+- Surface recurring themes, symbols, and story threads
+- Preserve contradictions, alternate versions, and uncertainty
+- Export an evolving knowledge base to an Obsidian vault
 
----
-## Detail
+Inputs may include story ideas, scene fragments, dialogue, world-building, research notes, draft chapters, and unfinished narrative threads. In some documents, fragments are separated by dashes or blank lines, with newer notes near the top and older ones below.
 
-The primary input is a large collection of fragmented creative material accumulated over time, not a full manuscript:
-
-- Story ideas
-- Scene fragments
-- Character concepts
-- Dialogue snippets
-- Worldbuilding notes
-- Research observations
-- Theme explorations
-- Alternative drafts
-- Contradictory possibilities
-- Incomplete narrative threads
-
-These fragments may have been written months or years apart and often reference one another without explicit links. They are sometimes separated by a number dashes on a line, or by multiple blank lines (2-4). In this way, each snippet is written with the latest at the top and oldest at the bottom. I may have started and not finished other whole documents as well with overlapping concepts and themes. 
-
-The goal of the system is to ingest this material, identify relationships, and construct an evolving knowledge graph that reveals patterns, connections, themes, and potential narratives that may not be obvious to the author. 
-
----
-
-## Project Scope
-
-This project is intentionally limited to the author's own work.
-
-The system is not intended for:
-
-- Public datasets
-- Large external corpora
-- Other authors' manuscripts
-- Copyrighted fiction written by third parties
-- Internet-scale ingestion
-
-The purpose of the project is to help the author understand, organize, and develop a personal creative universe.
-
-The graph should reflect the author's ideas rather than aggregate the ideas of others.
-
----
-
-## Primary Workflow
+## How it works
 
 ```text
-Creative Notes
-     +
-Scratch Documents
-     +
-Story Fragments
-     +
-Draft Chapters
-     +
-Research Notes
-          │
-          ▼
-
-Document Ingestion
-
-          ▼
-
-Semantic Analysis
-
-          ▼
-
-Entity Extraction
-
-          ▼
-
-Relationship Discovery
-
-          ▼
-
-Knowledge Graph
-
-          ▼
-
-Obsidian Vault
-
-          ▼
-
-Story Discovery
+Creative notes and drafts
+          ↓
+Document ingestion
+          ↓
+Semantic analysis and entity extraction
+          ↓
+Relationship discovery
+          ↓
+Knowledge graph
+          ↓
+Obsidian vault
+          ↓
+Story discovery
 ```
 
----
+For example, notes about an abandoned lighthouse, messages from the sea, a flooded kingdom, and the tides might be connected as a potential story cluster—even if they were written months apart.
 
-## Core Concept
+## Canon and possibilities
 
-The system assumes that the author often does not know what story is being written yet.
+The graph should distinguish between:
 
-Many fragments initially appear unrelated.
+- **Canon:** established facts
+- **Candidate knowledge:** ideas that may become part of a story
+- **Contradictions:** ideas that cannot all be true at once
+- **Variants:** alternate versions of a character, setting, or story
 
-Over time, the graph should help identify:
+The system should preserve these distinctions rather than resolve them automatically.
 
-- Recurring themes
-- Repeated characters
-- Similar concepts
-- Emerging settings
-- Narrative clusters
-- Shared symbolism
-- Potential plot structures
+## Local-first and project scope
 
-The graph is not merely documentation.
+This project is intended for my own creative work, not public datasets, large external corpora, or other authors’ manuscripts. Processing should happen locally whenever practical, using local models, embeddings, databases, and orchestration tools. The system should remain useful without cloud services where feasible.
 
-It is a mechanism for discovering structure hidden within creative chaos.
+## Using AI-generated material
 
----
+AI can help analyze the notes and suggest connections or draft material. Suggestions remain drafts for review; published prose should reflect my voice and go through my own editorial process. The goal is to support the writing, not conceal AI involvement.
 
-## Narrative Clustering
+## Setup
 
-The system should automatically identify clusters of related ideas.
+1. Review [`agents/setup.md`](./agents/setup.md) for installation guidance.
+2. Update [`config/setup.yaml`](./config/setup.yaml) for your system and preferences before setup.
+3. Start with [`agents/agents.md`](./agents/agents.md) for the agent workflow.
 
-Example:
 
-```text
-Fragment A
-    "Abandoned lighthouse"
+## Long-term goal
 
-Fragment B
-    "Boy receives messages from the sea"
-
-Fragment C
-    "Flooded kingdom"
-
-Fragment D
-    "Moon controls tides"
-```
-
-These may have been written months apart.
-
-The graph should discover that they belong to a common conceptual space and suggest a possible narrative cluster.
-
----
-
-## Canon vs Possibility
-
-Not every node in the graph represents canonical truth.
-
-The system distinguishes between:
-
-### Canon
-
-Established facts.
-
-### Candidate Knowledge
-
-Potential ideas.
-
-### Contradictions
-
-Mutually exclusive concepts.
-
-### Variants
-
-Alternative story versions.
-
-The graph should preserve uncertainty rather than prematurely resolving it.
-
----
-
-## Local-First Philosophy
-
-All story processing should occur locally whenever practical.
-
-Goals:
-
-- Preserve author privacy
-- Protect unpublished intellectual property
-- Maintain ownership of creative work
-- Minimize external dependencies
-
-Preferred components:
-
-- Local LLMs
-- Local vector databases
-- Local graph databases
-- Local embedding generation
-- Local agent orchestration
-
-The system should continue operating without cloud services whenever feasible.
-
----
-
-## Human Voice Preservation
-
-The system may use AI assistance during analysis and generation, but published prose must ultimately sound like the author.
-
-Generated content should be treated as draft material.
-
-Before incorporation into manuscripts, AI-produced text should pass through style-preservation or humanization workflows.
-
-Potential tools include:
-
-- Humanizer pipelines
-- Local rewriting models
-- Author-style refinement agents
-- Manual editorial review
-
-The objective is not to conceal AI use.
-
-The objective is to ensure that the final prose reflects the author's voice rather than the default voice of a language model.
-
----
-
-## Long-Term Goal
-
-Build a continuously evolving creative intelligence system capable of:
-
-- Reading years of creative material
-- Extracting knowledge automatically
-- Constructing a living story graph
-- Identifying hidden relationships
-- Preserving competing ideas
-- Supporting worldbuilding
-- Assisting manuscript development
-- Continues the writing process within the system
-
-The final product should function less like a writing assistant and more like a permanent literary research department for a single author.
+Build a personal literary research system that can organize years of creative work, preserve competing ideas, reveal hidden connections, and support world-building and manuscript development.
