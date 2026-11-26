@@ -34,11 +34,8 @@ Be idempotent. If a step's output already exists, verify it is correct and move 
 
 | File | Role |
 |------|------|
-| config/setup.yaml | paths, model, chunking, entity and relationship types |
-| agents/agents.md | shared rules and agent catalog |
-| agents/ingestion.md | the agent the smoke test runs |
-| examples/story.txt | smoke test input |
-| examples/expected-ingestion.md | golden output, if present |
+| config/setup.yaml | paths and model |
+| agents/agents.md | agent catalog and instructions |
 
 SCHEMA.md is an output, not an input. Do not require it here.
 

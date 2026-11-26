@@ -81,7 +81,7 @@ AI can help analyze the notes and suggest connections or draft material. Suggest
 
 ## Setup
 
-1. Review [`agents/setup.md`](./agents/setup.md) for installation guidance.
+1. Review [`tasks/setup.md`](./tasks/setup.md) for installation guidance.
 2. Update [`config/setup.yaml`](./config/setup.yaml) for your system and preferences before setup.
 3. Start with [`agents/agents.md`](./agents/agents.md) for the agent workflow.
 

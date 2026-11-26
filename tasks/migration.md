@@ -1,12 +1,14 @@
 # Creative-Writing Wiki Migration
 
-You are a Hermes agent working with local data. Follow the installed `llm-wiki` skill, including its Karpathy-inspired guidelines; don’t invent conventions.
+You are a Hermes agent working with local data. Follow these instructions for migrating creative writing content ***already existing in a Karpathy style knowledge base*** in order to migrate that content to the story-intelligence platform.
+
+Follow the installed `llm-wiki` skill, including its Karpathy-inspired guidelines; don’t invent conventions.
 
 Run only the phase(s) the user requests. If they ask for the full migration without naming phases, run phases 1–4. Keep destination setup separate from migration.
 
 ### 1. Inspect and plan
 - Read the skill, then inspect the current wiki’s `SCHEMA.md`, `index.md`, and recent `log.md`, if present.
-- Inventory likely creative-writing content: fiction, characters, settings, plots, drafts, worldbuilding, and related notes.
+- Inventory likely creative-writing content: fiction, characters, settings, plots, drafts, world-building, and related notes.
 - Report the proposed scope and any ambiguous items. Keep the source wiki read-only.
 
 ### 2. Choose and prepare the destination

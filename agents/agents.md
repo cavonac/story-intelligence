@@ -8,7 +8,6 @@ Transform unstructured writing into an interconnected knowledge graph.
 - Preserve provenance for every fact added to the knowledge graph.
 - Prefer incremental updates over rebuilding existing pages.
 - Flag uncertainty rather than presenting an inference as fact.
-- Follow the shared [Agent Rules](../rules/agent-rules.md).
 - Follow each agent’s own instructions for its specific responsibilities.
 
 ## Agent catalog
