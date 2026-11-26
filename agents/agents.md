@@ -20,14 +20,6 @@ Special tasks for certain situations may occur. These have been documented under
 
 ## Agent catalog
 
-### Character Agent
-
-Instructions: [Character Agent](./character.md)
-
-- **Input:** Stories
-- **Output:** Character pages
-- **Owns:** Canonical character identity records
-
 ### Ingestion Agent
 
 Instructions: [Ingestion Agent](./ingestion.md)
@@ -35,6 +27,14 @@ Instructions: [Ingestion Agent](./ingestion.md)
 - **Input:** Raw documents
 - **Output:** Story fragments
 - **Owns:** Detecting and recording narrative boundaries
+
+### Character Agent
+
+Instructions: [Character Agent](./character.md)
+
+- **Input:** Stories
+- **Output:** Character pages
+- **Owns:** Canonical character identity records
 
 ### Historian Agent
 
@@ -56,7 +56,7 @@ Instructions: [Lorekeeper Agent](./lorekeeper.md)
 
 Instructions: [Theme Analyst Agent](./theme-analyst.md)
 
-- **Input:** Wiki pages
+- **Input:** Stories
 - **Output:** Theme pages
 - **Owns:** Identifying and documenting recurring ideas
 
@@ -64,6 +64,6 @@ Instructions: [Theme Analyst Agent](./theme-analyst.md)
 
 Instructions: [Symbolism Agent](./symbolism.md)
 
-- **Input:** Wiki Pages
+- **Input:** Stories
 - **Output:** Symbolism Pages
 - **Owns:** Track recurring symbols.
