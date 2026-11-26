@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint config, links, agent catalog
+        run: |
+          python3 <<'PY'
+          import pathlib, re, sys, yaml
+
+          root = pathlib.Path(".")
+          errors = []
+          link_re = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
+
+          # 1. config/setup.yaml must parse
+          cfg = root / "config/setup.yaml"
+          try:
+              data = yaml.safe_load(cfg.read_text(encoding="utf-8"))
+              if not isinstance(data, dict):
+                  errors.append("config/setup.yaml: top level must be a mapping")
+          except Exception as e:
+              errors.append(f"config/setup.yaml: {e}")
+
+          # 2. relative links in .md files must resolve
+          for md in sorted(root.glob("**/*.md")):
+              if ".git" in md.parts:
+                  continue
+              for target in link_re.findall(md.read_text(encoding="utf-8")):
+                  t = target.split("#", 1)[0]
+                  if not t or t.startswith(("http://", "https://", "mailto:")):
+                      continue
+                  if not (md.parent / t).exists():
+                      errors.append(f"broken link in {md}: {target}")
+
+          # 3. every agents/*.md appears in the catalog (and vice versa)
+          catalog_path = root / "agents/agents.md"
+          catalog = catalog_path.read_text(encoding="utf-8")
+          # setup.md is a one-off bootstrap agent, not part of the recurring catalog
+          for agent in sorted(root.glob("agents/*.md")):
+              if agent.name in ("agents.md", "setup.md"):
+                  continue
+              if agent.name not in catalog:
+                  errors.append(f"missing from catalog: agents/{agent.name}")
+          for target in link_re.findall(catalog):
+              t = target.split("#", 1)[0]
+              if t.startswith("./") and not (root / "agents" / t[2:]).exists():
+                  errors.append(f"catalog lists missing file: {t}")
+
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print("All checks passed.")
+          PY

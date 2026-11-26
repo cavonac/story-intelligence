@@ -156,7 +156,7 @@ Questions worth further investigation.
 
 Create a section named:
 
-Christopher Notes
+Author's Notes
 
 Rules:
 
@@ -170,7 +170,7 @@ Rules:
 
 Evaluate usefulness for:
 
-- Worldbuilding
+- World-building
 - Character creation
 - Politics
 - Economics
@@ -271,11 +271,11 @@ Do not propagate errors by using sibling files for hints at schema; trust only `
 
 | # | Behavior | Goal | Likely Prompt | Confidence |
 |---|----------|------|---------------|------------|
-| 1 | Run a "Creative Relevance" pass on ingested docs | Flag worldbuilding and worldcraft material | "Assess each document for creative relevance — worldbuilding, characters, politics, economics, tech — explain if yes, otherwise say 'No obvious creative relevance.'" | 9 |
+| 1 | Run a "Creative Relevance" pass on ingested docs | Flag world-building and world-craft material | "Assess each document for creative relevance; world-building, characters, politics, economics, tech. Explain if yes, otherwise say 'No obvious creative relevance.'" | 9 |
 | 2 | Cap document ingestion per agent run | Avoid oversized single runs | "Per run: Markdown 50k–200k words, technical PDF 100–300 pages, one chapter of a book at a time. Split anything bigger." | 9 |
 
 ## Implementation details
 
-The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename. This file remains outside of the wiki and is not part of the knowledge graph and does not contain frontmatter. The agent was responsible for inserting filenames via prompt.
+The system was tested by using a .tsv file as an ingestion queue, placed near the wiki and available to the agent. It contains at least a status column and the filename. This file remains outside of the wiki and is not part of the knowledge graph and does not contain front-matter. The agent was responsible for inserting filenames via prompt.
 
 Your pipeline may differ. 
