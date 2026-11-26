@@ -1,6 +1,6 @@
 # Story Intelligence
 
-Story Intelligence turns a collection of personal writing fragments into an evolving knowledge base. It uses LLM-Wiki to organize ideas into a knowledge graph, then helps surface connections, continuity issues, themes, and possible story directions.
+Story Intelligence turns a collection of personal writing fragments into an evolving knowledge base. It uses [LLM-Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) as a "pattern for building personal knowledge bases using LLMs" (Karpathy, 2026) and to organize ideas into a knowledge graph, then helps surface connections, continuity issues, themes, and possible story directions.
 
 ## Why
 
